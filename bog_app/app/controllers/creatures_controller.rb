@@ -1,14 +1,14 @@
-class CreatureController < ApplicationController
+class CreaturesController < ApplicationController
   def index
-    @creature = Creature.all
+    @creatures = Creature.all
   end
 
   def show
-    @creature = Creature.find(params[:id])
+    @creatures = Creature.find(params[:id])
   end
 
   def new
-    @creature = Creature.new
+    @creatures = Creature.new
   end
 
   def create
@@ -17,8 +17,8 @@ class CreatureController < ApplicationController
   end
 
   def destroy
-    @creature=Creature.find(params[:id])
-    @creature.destroy
+    @creatures =Creature.find(params[:id])
+    @creatures.destroy
     redirect_to('/creatures')
   end
 
