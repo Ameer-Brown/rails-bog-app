@@ -1,7 +1,7 @@
-<% @creatures.each do |creature| %>
+<% @creature.each do |creature| %>
     <p>
       <strong>Name:</strong> <%= creature.name %><br>
       <strong>Description:</strong> <%= creature.description %>
     </p>
-      <button><%= link_to "Creature Details", creature_path(creature)%></button>
+
   <% end %>

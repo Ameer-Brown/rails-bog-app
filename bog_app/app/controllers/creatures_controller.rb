@@ -17,8 +17,8 @@ class CreaturesController < ApplicationController
   end
 
   def destroy
-    @creatures =Creature.find(params[:id])
-    @creatures.destroy
+    @creature =Creature.find(params[:id])
+    @creature.destroy
     redirect_to('/creatures')
   end
 
