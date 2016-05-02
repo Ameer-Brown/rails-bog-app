@@ -1,0 +1,5 @@
+<b>Name:</b> <%= @creature.name %><br>
+<b>Description:</b> <%= @creature.description %>
+<button><%= link_to "back", root_path%></button>
+<button><%= link_to "edit", edit_creature_path%></button>
+<%= button_to "Destroy", @creature, method: :delete %>
