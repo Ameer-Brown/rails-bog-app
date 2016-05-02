@@ -16,6 +16,16 @@ class CreaturesController < ApplicationController
     redirect_to('/creatures')
   end
 
+  def edit
+    @creature = Creature.find_by_id(params[:id])
+  end
+
+  def update
+    @creature = Creature.find_by_id(params[:id])
+    @creature.update_attributes(c_params)
+    redirect_to('/creatures')
+  end
+
   def destroy
     @creature =Creature.find(params[:id])
     @creature.destroy
